@@ -1,0 +1,85 @@
+
+{% extends "pages/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- <img class="" src="{% static 'img/banner.jpg' %}" alt="">
+ -->
+    
+    <div class="cBanner">
+        <div class="swiper-container h-64 w-full">
+            <div class="swiper-wrapper">
+                
+                <div class="swiper-slide max-w-full h-auto">
+                    <img class="w-full h-full object-cover" src="{% static 'img/banner.jpg' %}" alt="">
+                    
+                    <div class="rounded overflow-hidden shadow-lg">
+                        <div class="p-4 bg-sky-300">
+                            <div class="font-bold text-xl mb-2">Construcción</div>
+                            <p class="text-gray-700 text-base mb-3">Depscrición Slide 1.</p>
+                            <button class="bg-white text-black p-2 rounded">
+                                Mas información
+                            </button>
+                        </div>
+                    
+                    </div>
+                </div>
+                
+                <div class="swiper-slide max-w-full h-auto">
+                    <img class="w-full h-full object-cover" src="{% static 'img/bAsbesto.webp' %}" alt="">
+                    <div class="rounded overflow-hidden shadow-lg">
+                        <div class="p-4 bg-slate-400">
+                            <div class="font-bold text-xl mb-2">Retiro de abesto</div>
+                            <p class="text-gray-700 text-base">Descripción Slide 2.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide max-w-full h-auto">
+                    <img class="w-full h-full object-cover" src="{% static 'img/banner_solar2.png' %}" alt="">
+                    <div class="rounded overflow-hidden shadow-lg">
+                        <div class="p-4 bg-slate-400">
+                            <div class="font-bold text-xl mb-2">Instalación termopaneles</div>
+                            <p class="text-gray-700 text-base">Descripción Slide 3.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Agrega más slides según sea necesario -->
+            </div>
+            <!-- Agrega la paginación y las flechas de navegación -->
+
+        </div>
+    </div>
+    
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            effect: 'slide',
+            slidesPerView: 1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 3000, // Ajusta el tiempo de espera entre slides en milisegundos
+                disableOnInteraction: true,
+            },
+            
+        });
+    </script>
+
+    <div class="max-w-lg bg-blue-700 rounded-md shadow-md p-6">
+        <h2 class="text-2xl font-bold mb-2">Título del Bloque</h2>
+        <h3 class="text-lg text-gray-600 mb-4">Subtítulo informativo</h3>
+        <p class="text-gray-800">Cuerpo de la información. Puedes agregar más contenido aquí.</p>
+    </div>
+
+    <h1 class="text-4xl text-center p-3"> Pagina principal </h1>
+
+{% endblock %}
